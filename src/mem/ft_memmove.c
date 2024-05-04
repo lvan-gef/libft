@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:26:59 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:16:58 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:23:55 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dst_ = (char *)dst;
 	src_ = (const char *)src;
-	if (!dst_ && !src_)
+	if (!dst_ || !src_)
 		return (NULL);
 	if (dst_ < src_)
 	{
