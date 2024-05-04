@@ -10,33 +10,67 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -c -Wall -Werror -Wextra
-CFILES = ft_memset.c ft_strjoin.c ft_strlcat.c ft_itoa.c ft_atoi.c ft_bzero.c ft_putstr_fd.c ft_isdigit.c ft_strlcpy.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_calloc.c ft_putnbr_fd.c ft_putchar_fd.c ft_strnstr.c ft_putendl_fd.c ft_memcpy.c ft_strchr.c ft_memcmp.c ft_striteri.c ft_memchr.c ft_isascii.c ft_isalnum.c ft_memmove.c ft_split.c ft_isalpha.c ft_strrchr.c ft_strlen.c ft_isprint.c ft_strtrim.c ft_substr.c ft_strmapi.c ft_toupper.c
-OBJECTS = $(CFILES:%.c=%.o)
-B_CFILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c 
-B_OBJECTS = $(B_CFILES:%.c=%.o)
-INCLUDE = libft.h
+CC = cc
+CFLAGS = -Wall -Werror -Wextra
+
+# Root source directory
+SRC = src/
+
+# dirs
+OBJDIR = obj/
+LLDIR = $(SRC)ll/
+MEMDIR = $(SRC)mem/
+PRINTDIR = $(SRC)printer/
+STRDIR = $(SRC)str/
+GNLDIR = $(SRC)gnl/
+PRINTFDIR = $(SRC)printf/
+
+# c files
+LLFILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+MEMFILES = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
+PRINTFILES = ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
+STRFILES = ft_strjoin.c ft_strlcat.c ft_itoa.c ft_atoi.c ft_isdigit.c ft_strlcpy.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_strnstr.c ft_strchr.c ft_striteri.c ft_isascii.c ft_isalnum.c ft_split.c ft_isalpha.c ft_strrchr.c ft_strlen.c ft_isprint.c ft_strtrim.c ft_substr.c ft_strmapi.c ft_toupper.c
+
+
+# objects
+LLOBJ = $(LLFILES:%.c=$(OBJDIR)ll/%.o)
+MEMOBJ = $(MEMFILES:%.c=$(OBJDIR)mem/%.o)
+PRINTOBJ = $(PRINTFILES:%.c=$(OBJDIR)printer/%.o)
+STROBJ = $(STRFILES:%.c=$(OBJDIR)str/%.o)
+
+HEADERS = -I include/libft.h
 NAME = libft.a
 LIB = ar rcs
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
 
-$(NAME): $(OBJECTS) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJECTS)
-	ranlib $(NAME)
+$(NAME): $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(INCLUDE)
+	$(LIB) $(NAME) $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(GNLOBJ) $(PRINTFOBJ) -s
 
 all: $(NAME)
 
-bonus: $(B_OBJECTS) $(INCLUDE)
-	$(LIB) $(NAME) $(B_OBJECTS)
-	ranlib $(NAME)
+# linked list
+$(OBJDIR)ll/%.o: $(LLDIR)%.c
+	@mkdir -p $(OBJDIR)ll
+	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
 
-%.o: %.c
-	$(CC) $(CFLAGS) -o $@ $<
+# mem
+$(OBJDIR)mem/%.o: $(MEMDIR)%.c
+	@mkdir -p $(OBJDIR)mem
+	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+
+# print
+$(OBJDIR)printer/%.o: $(PRINTDIR)%.c
+	@mkdir -p $(OBJDIR)printer
+	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+
+# str
+$(OBJDIR)str/%.o: $(STRDIR)%.c
+	@mkdir -p $(OBJDIR)str
+	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f $(OBJECTS) $(B_OBJECTS)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)
