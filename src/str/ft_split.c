@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 22:22:49 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:17:17 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:29:00 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int	find_words(const char *s, char c, char **words, int len)
 	int	index;
 	int	fc;
 
-	fc = 0;
 	index = 0;
 	while (index < len)
 	{

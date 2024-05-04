@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 12:54:18 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:17:22 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:27:37 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	index = 0;
 	li_index = 0;
-	check_point = 0;
 	if (!ft_strlen(needle))
 		return ((char *)haystack);
 	if (!haystack)
