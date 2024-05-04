@@ -6,14 +6,17 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:39:10 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/05 00:35:52 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 01:42:38 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <stdio.h>
+
+# include "./get_next_line.h"
 
 typedef struct s_list
 {
