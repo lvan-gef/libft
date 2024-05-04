@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 16:38:50 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:16:58 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:21:50 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	char		*dst_;
 	const char	*src_;
 
-	if (!src && !dst)
+	if (!src || !dst)
 		return (NULL);
 	dst_ = dst;
 	src_ = src;
