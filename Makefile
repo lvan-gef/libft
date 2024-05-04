@@ -3,7 +3,7 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: lvan-gef <lvan-gef@student.codam.n>          +#+                      #
+#    By: lvan-gef <lvan-gef@student.codam.nl>          +#+                     #
 #                                                    +#+                       #
 #    Created: 2022/10/25 16:26:47 by lvan-gef      #+#    #+#                  #
 #    Updated: 2022/12/02 17:59:23 by lvan-gef      ########   odam.nl          #
@@ -45,7 +45,7 @@ LIB = ar rcs
 .PHONY: all clean fclean re
 
 $(NAME): $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(GNLOBJ) $(PRINTFOBJ) -s
+	$(LIB) $(NAME) $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) -s
 
 all: $(NAME)
 

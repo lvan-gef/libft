@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_lstclear_bonus.c                                :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/02 15:44:09 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:15:20 by lvan-gef      ########   odam.nl         */

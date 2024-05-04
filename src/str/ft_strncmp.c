@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_strncmp.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 13:00:15 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:22 by lvan-gef      ########   odam.nl         */

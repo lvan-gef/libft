@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_toupper.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:37:02 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:24 by lvan-gef      ########   odam.nl         */

@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_lstadd_front_bonus.c                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/01 20:51:22 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:15:37 by lvan-gef      ########   odam.nl         */

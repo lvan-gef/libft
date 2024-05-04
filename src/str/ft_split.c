@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_split.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 22:22:49 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:17 by lvan-gef      ########   odam.nl         */

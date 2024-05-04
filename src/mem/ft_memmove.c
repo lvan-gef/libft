@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:26:59 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:16:58 by lvan-gef      ########   odam.nl         */

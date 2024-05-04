@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 12:15:23 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:17 by lvan-gef      ########   odam.nl         */

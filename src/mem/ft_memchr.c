@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 12:56:25 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:16:58 by lvan-gef      ########   odam.nl         */

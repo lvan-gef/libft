@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:29:58 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:17 by lvan-gef      ########   odam.nl         */

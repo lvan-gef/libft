@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 17:19:26 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:17 by lvan-gef      ########   odam.nl         */

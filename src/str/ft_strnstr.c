@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <lvan-gef@student.codam.n>          +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 12:54:18 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/04 23:17:22 by lvan-gef      ########   odam.nl         */
