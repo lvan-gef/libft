@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:39:10 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/05 00:16:17 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:35:52 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void		*ft_memset(void *b, int c, int len);
 
 // src/printer
 void		ft_putchar_fd(char c, int fd);
-void		ft_putendl_fd(char *s, int fd);
+void		ft_putendl_fd(const char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
-void		ft_putstr_fd(char *s, int fd);
+void		ft_putstr_fd(const char *s, int fd);
 
 // src/str
 int			ft_atoi(const char *str);

@@ -6,13 +6,13 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 16:23:47 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:17:09 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/05 00:35:23 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	index;
 
