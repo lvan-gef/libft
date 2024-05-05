@@ -52,27 +52,27 @@ all: $(NAME)
 # linked list
 $(OBJDIR)ll/%.o: $(LLDIR)%.c
 	@mkdir -p $(OBJDIR)ll
-	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
 
 # mem
 $(OBJDIR)mem/%.o: $(MEMDIR)%.c
 	@mkdir -p $(OBJDIR)mem
-	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
 
 # print
 $(OBJDIR)printer/%.o: $(PRINTDIR)%.c
 	@mkdir -p $(OBJDIR)printer
-	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
 
 # str
 $(OBJDIR)str/%.o: $(STRDIR)%.c
 	@mkdir -p $(OBJDIR)str
-	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
 
 # gnl
 $(OBJDIR)gnl/%.o: $(GNLDIR)%.c
 	@mkdir -p $(OBJDIR)gnl
-	$(CC) $(HEADER) -c $(CFLAGS) -o $@ $<
+	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
 
 clean:
 	rm -rf $(OBJDIR)
