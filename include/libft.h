@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:39:10 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/23 00:39:27 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/23 00:48:49 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr_fd(const char *s, int fd);
 
 // src/str
+double		ft_atof(const char *str);
 int			ft_atoi(const char *str);
 long int	ft_atoli(const char *str);
 int			ft_isalnum(int c);
