@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/23 00:29:19 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/23 00:29:22 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/23 00:37:33 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ int	ft_iswhitespace(int c)
 	}
 	return (0);
 }
-
