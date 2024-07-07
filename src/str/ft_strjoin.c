@@ -6,15 +6,15 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/20 16:01:04 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 04:18:44 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 04:20:17 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-static int	add_to(char *str, char const *s, int str_index)
+static size_t	add_to(char *str, char const *s, size_t str_index)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	while (s[index] != '\0')
@@ -29,7 +29,7 @@ static int	add_to(char *str, char const *s, int str_index)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		str_index;
+	size_t	str_index;
 
 	if (!s1 || !s2)
 		return (NULL);
