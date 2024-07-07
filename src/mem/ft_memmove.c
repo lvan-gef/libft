@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:26:59 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 04:27:25 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 04:29:57 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 * @brief Copy <len> bytes over to a memory area
 * memory areas may overlap
 *
-* @param dst
-* @param src
-* @param len
+* @param dst Memory area where copy to   (void*)
+* @param src Memory area where copy from (void*)
+* @param len Size to be copy             (size_t)
 *
-* @return
+* @return void* | NULL
 */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
