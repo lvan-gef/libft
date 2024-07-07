@@ -6,20 +6,12 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 16:23:47 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 03:42:56 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 16:28:59 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-/**
-* @brief Write a string
-*
-* @param s  String to write (char *)
-* @param fd File descriptor (int)
-*
-* @return void
-*/
 void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	index;

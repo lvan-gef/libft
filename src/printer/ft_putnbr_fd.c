@@ -6,20 +6,12 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 17:00:47 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 03:41:56 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 16:28:59 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-/**
-* @brief Write a interger
-*
-* @param n  Interger to write (int)
-* @param fd File descriptor   (int)
-*
-* @return void
-*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
