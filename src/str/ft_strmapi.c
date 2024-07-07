@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 22:20:28 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 04:35:01 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 04:35:39 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[index] = f(index, s[index]);
 		index++;
 	}
-	str[index] = '\0';
 	return (str);
 }
