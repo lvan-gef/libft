@@ -6,14 +6,14 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:26:59 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 03:27:31 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 04:27:25 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
 /**
-* @brief Copy n bytes over to a new memory area
+* @brief Copy <len> bytes over to a memory area
 * memory areas may overlap
 *
 * @param dst
