@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/01 22:19:11 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 17:08:30 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 17:12:05 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 *
 * @param fd File descriptor to read from (int)
 *
-* @return char * | NULL
+* @return char* | NULL
 */
 char	*get_next_line(int fd);
 
@@ -53,7 +53,7 @@ char	*gnl_calloc(size_t count, size_t size);
 *
 * @param str String that must be checked (char*)
 *
-* @return >0 | 0
+* @return size_t >0 | 0
 */
 size_t	gnl_is_newline(const char *str);
 
