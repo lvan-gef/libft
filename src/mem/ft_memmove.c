@@ -6,12 +6,22 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:26:59 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/05 00:23:55 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 03:27:31 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
+/**
+* @brief Copy n bytes over to a new memory area
+* memory areas may overlap
+*
+* @param dst
+* @param src
+* @param len
+*
+* @return
+*/
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*dst_;
