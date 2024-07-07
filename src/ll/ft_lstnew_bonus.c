@@ -6,12 +6,19 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/01 20:32:50 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:16:18 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 02:49:23 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
+/**
+* @brief Create a new node for a linked list
+*
+* @param content The data that must be hold in the node (void *)
+*
+* @return t_list | NULL
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
