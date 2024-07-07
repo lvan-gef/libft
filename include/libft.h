@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:39:10 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 02:02:00 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/07/07 03:30:48 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+#include <unistd.h>
 
 # include "./get_next_line.h"
 # include "./ft_printf.h"
