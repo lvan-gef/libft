@@ -1,80 +1,110 @@
-CC = cc
-CFLAGS = -Wall -Werror -Wextra -Wshadow -Wpedantic
+# Library name
+NAME := libft.a
 
-# Root source directory
-SRC = src/
+# Compiler and flags
+CC        ?= cc
+CFLAGS    := -Wall -Wextra -Werror -Wshadow -Wpedantic
+DEBUGFLAG := -g3 -fno-omit-frame-pointer
+DEPSFLAGS := -MMD -MP
 
-# dirs
-OBJDIR = obj/
+# Directories
+SRC_DIR   := src
+OBJ_DIR   := obj
+INC_DIR   := include
 
-LLDIR = $(SRC)ll/
-MEMDIR = $(SRC)mem/
-PRINTDIR = $(SRC)printer/
-STRDIR = $(SRC)str/
-GNLDIR = $(SRC)gnl/
-PRINTFDIR = $(SRC)ft_printf/
+# Module names
+MODULES := ll mem printer str gnl ft_printf
 
-# c files
-LLFILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
-MEMFILES = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
-PRINTFILES = ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
-STRFILES = ft_strjoin.c ft_strlcat.c ft_itoa.c ft_atoi.c ft_isdigit.c ft_strlcpy.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_strnstr.c ft_strchr.c ft_striteri.c ft_isascii.c ft_isalnum.c ft_split.c ft_isalpha.c ft_strrchr.c ft_strlen.c ft_isprint.c ft_strtrim.c ft_substr.c ft_strmapi.c ft_toupper.c ft_atoli.c ft_iswhitespace.c ft_split_ws.c ft_atof.c
-GNLFILES = get_next_line.c get_next_line_utils.c
-PRINTFFILES = ft_formatter.c ft_printf.c ft_writers.c
+# Generate directory paths
+SRC_DIRS := $(addprefix $(SRC_DIR)/, $(MODULES))
+OBJ_DIRS := $(addprefix $(OBJ_DIR)/, $(MODULES))
 
-# objects
-LLOBJ = $(LLFILES:%.c=$(OBJDIR)ll/%.o)
-MEMOBJ = $(MEMFILES:%.c=$(OBJDIR)mem/%.o)
-PRINTOBJ = $(PRINTFILES:%.c=$(OBJDIR)printer/%.o)
-STROBJ = $(STRFILES:%.c=$(OBJDIR)str/%.o)
-GNLOBJ = $(GNLFILES:%.c=$(OBJDIR)gnl/%.o)
-PRINTFOBJ = $(PRINTFFILES:%.c=$(OBJDIR)ft_printf/%.o)
+# Source files per module
+ll_SRC      := ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+               ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+               ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-HEADERS = -I include
-NAME = libft.a
-LIB = ar rcs
+mem_SRC     := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
+               ft_memmove.c ft_memset.c
 
-.PHONY: all clean fclean re
+printer_SRC := ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
 
-$(NAME): $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(GNLOBJ) $(PRINTFOBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(LLOBJ) $(MEMOBJ) $(PRINTOBJ) $(STROBJ) $(GNLOBJ) $(PRINTFOBJ) -s
+str_SRC     := ft_strjoin.c ft_strlcat.c ft_itoa.c ft_atoi.c ft_isdigit.c \
+               ft_strlcpy.c ft_strdup.c ft_strncmp.c ft_tolower.c ft_strnstr.c \
+               ft_strchr.c ft_striteri.c ft_isascii.c ft_isalnum.c ft_split.c \
+               ft_isalpha.c ft_strrchr.c ft_strlen.c ft_isprint.c ft_strtrim.c \
+               ft_substr.c ft_strmapi.c ft_toupper.c ft_atoli.c ft_iswhitespace.c \
+               ft_split_ws.c ft_atof.c
 
-all: $(NAME)
+gnl_SRC     := get_next_line.c get_next_line_utils.c
 
-# linked list
-$(OBJDIR)ll/%.o: $(LLDIR)%.c
-	@mkdir -p $(OBJDIR)ll
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+ft_printf_SRC := ft_formatter.c ft_printf.c ft_writers.c
 
-# mem
-$(OBJDIR)mem/%.o: $(MEMDIR)%.c
-	@mkdir -p $(OBJDIR)mem
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+# Generate objects paths
+ll_OBJ      := $(ll_SRC:%.c=$(OBJ_DIR)/ll/%.o)
+mem_OBJ     := $(mem_SRC:%.c=$(OBJ_DIR)/mem/%.o)
+printer_OBJ := $(printer_SRC:%.c=$(OBJ_DIR)/printer/%.o)
+str_OBJ     := $(str_SRC:%.c=$(OBJ_DIR)/str/%.o)
+gnl_OBJ     := $(gnl_SRC:%.c=$(OBJ_DIR)/gnl/%.o)
+ft_printf_OBJ := $(ft_printf_SRC:%.c=$(OBJ_DIR)/ft_printf/%.o)
 
-# print
-$(OBJDIR)printer/%.o: $(PRINTDIR)%.c
-	@mkdir -p $(OBJDIR)printer
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+# All objects combined
+OBJECTS := $(ll_OBJ) $(mem_OBJ) $(printer_OBJ) $(str_OBJ) $(gnl_OBJ) $(ft_printf_OBJ)
+DEPS    := $(OBJECTS:.o=.d)
 
-# str
-$(OBJDIR)str/%.o: $(STRDIR)%.c
-	@mkdir -p $(OBJDIR)str
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+# Headers
+HEADERS := -I $(INC_DIR)
 
-# gnl
-$(OBJDIR)gnl/%.o: $(GNLDIR)%.c
-	@mkdir -p $(OBJDIR)gnl
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+# Archive command
+LIB := ar rcs
 
-# printf
-$(OBJDIR)ft_printf/%.o: $(PRINTFDIR)%.c
-	@mkdir -p $(OBJDIR)ft_printf
-	$(CC) $(HEADERS) -c $(CFLAGS) -o $@ $<
+# Colors for status messages
+BLUE     := \033[36m
+NC       := \033[0m
 
-clean:
-	rm -rf $(OBJDIR)
+# Build rules
+.PHONY all:
+all: $(NAME)  ## Build the library (default)
 
-fclean: clean
-	rm -f $(NAME)
+.PHONY debug:
+debug: CFLAGS += $(DEBUGFLAG)  ## Build with debug flags
+debug: $(NAME)
 
-re: fclean all
+.PHONY clean:
+clean:  ## Clean object files
+	@rm -rf $(OBJ_DIR)
+	@echo "Cleaned object files"
+
+.PHONY fclean:
+fclean: clean  ## Clean object files and library
+	@rm -f $(NAME)
+	@echo "Cleaned everything"
+
+.PHONY re:
+re: fclean all  ## Clean all and rebuild
+
+.PHONY help:
+help:  ## Display this help message
+	@echo 'Usage: make $(BLUE)<target>$(NC)'
+	@echo 'Available targets:'
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(BLUE)%-15s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+
+# Build library
+$(NAME): $(OBJECTS)
+	$(LIB) $@ $(OBJECTS)
+	@echo "Library: '$(NAME)' built successfully"
+
+# Create all object directories at once
+$(OBJ_DIRS): | $(OBJ_DIR)
+	@mkdir -p $@
+
+# Single pattern rule for all object files
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIRS)
+	$(CC) $(CFLAGS) $(DEPSFLAGS) $(HEADERS) -c $< -o $@
+
+# Create base object directory
+$(OBJ_DIR):
+	@mkdir -p $@
+
+# Include dependency files
+-include $(DEPS)
