@@ -3,7 +3,7 @@ NAME := libft.a
 
 # Compiler and flags
 CC        ?= cc
-CFLAGS    := -Wall -Wextra -Werror -Wshadow -Wpedantic
+CFLAGS    := -Wall -Wextra -Werror -Wshadow -Wpedantic -Wconversion -Wdouble-promotion
 DEBUGFLAG := -g3 -fno-omit-frame-pointer
 DEPSFLAGS := -MMD -MP
 
