@@ -6,13 +6,13 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/12 17:51:54 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/05 02:51:29 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:17:17 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ft_printf.h"
 
-static	int	check_it(va_list args, char c)
+static	ssize_t	check_it(va_list args, char c)
 {
 	if (c == 'c')
 		return (write_ascii(va_arg(args, int)));
@@ -38,8 +38,8 @@ static	int	check_it(va_list args, char c)
 int	ft_printf(const char *s, ...)
 {
 	va_list		args;
-	int			result;
-	int			counter;
+	ssize_t		result;
+	ssize_t		counter;
 
 	result = 0;
 	va_start(args, s);
@@ -61,5 +61,5 @@ int	ft_printf(const char *s, ...)
 		s++;
 	}
 	va_end(args);
-	return (result);
+	return ((int)result);
 }

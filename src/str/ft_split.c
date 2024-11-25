@@ -6,15 +6,15 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 22:22:49 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 16:33:38 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:20:29 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void	free_me(char **words, int len)
+static	void	free_me(char **words, size_t len)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	while (index < len)
@@ -26,11 +26,11 @@ void	free_me(char **words, int len)
 	free(words);
 }
 
-int	word_counter(const char *s, char c)
+static	size_t	word_counter(const char *s, char c)
 {
-	int	index;
-	int	counter;
-	int	delim;
+	size_t	index;
+	size_t	counter;
+	size_t	delim;
 
 	index = 0;
 	counter = 0;
@@ -52,23 +52,23 @@ int	word_counter(const char *s, char c)
 	return (counter);
 }
 
-int	add_me(const char *s, int start, int stop, char **words)
+static	size_t	add_me(const char *s, size_t start, size_t stop, char **words)
 {
 	int	index;
 
 	index = 0;
 	while (words[index])
 		index++;
-	words[index] = ft_substr(s, start, stop - start);
+	words[index] = ft_substr(s, (unsigned int)start, stop - start);
 	if (!words[index])
 		return (0);
 	return (1);
 }
 
-int	find_words(const char *s, char c, char **words, int len)
+static	size_t	find_words(const char *s, char c, char **words, size_t len)
 {
-	int	index;
-	int	fc;
+	size_t	index;
+	size_t	fc;
 
 	index = 0;
 	while (index < len)
@@ -95,14 +95,14 @@ int	find_words(const char *s, char c, char **words, int len)
 
 char	**ft_split(char const *s, char c)
 {
-	int		wc;
-	int		len;
-	char	**words;
+	size_t		wc;
+	size_t		len;
+	char		**words;
 
 	if (!s)
 		return (NULL);
 	wc = word_counter(s, c) + 1;
-	len = (int)ft_strlen(s);
+	len = ft_strlen(s);
 	words = ft_calloc(wc, sizeof(char *));
 	if (!words)
 		return (NULL);

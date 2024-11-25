@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 11:18:11 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 16:40:39 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:00:30 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static	size_t	size(char *dst, size_t dstsize)
 		ptr++;
 		dstsize--;
 	}
-	return (ptr - dst);
+	return ((size_t)(ptr - dst));
 }
 
 static	char	*go_to(char *dst, size_t counter)
@@ -62,5 +62,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		src_start++;
 	}
 	*dst = '\0';
-	return (dst_len + (src_start - src));
+	return (dst_len + (size_t)(src_start - src));
 }

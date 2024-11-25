@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/20 16:05:34 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:17:22 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:07:24 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start_pos;
-	int		end_pos;
-	int		len;
+	size_t	start_pos;
+	size_t	end_pos;
+	size_t	len;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -35,5 +35,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end_pos--;
 	}
 	len = end_pos - start_pos + 1;
-	return (ft_substr(s1, start_pos, len));
+	return (ft_substr(s1, (unsigned int)start_pos, len));
 }

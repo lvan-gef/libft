@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 17:24:01 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/04 23:17:22 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:06:26 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	index = 0;
 	last_index = -1;
 	str_ptr = (char *)s;
-	cc = c;
+	cc = (char)c;
 	if (cc == '\0')
 	{
 		return (ft_strchr(s, c));

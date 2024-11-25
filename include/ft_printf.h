@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/12 17:51:54 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 17:26:21 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:18:51 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 *
 * @return int >=0 | -1
 */
-int	to_hex(unsigned long int size, size_t upper, size_t base);
+ssize_t	to_hex(unsigned long int size, size_t upper, size_t base);
 
 /**
 * @brief Print a interger to stdout
@@ -37,7 +37,7 @@ int	to_hex(unsigned long int size, size_t upper, size_t base);
 *
 * @return int >=0 | -1
 */
-int	format_int(int size, size_t upper, size_t base);
+ssize_t	format_int(int size, size_t upper, size_t base);
 
 /**
 * @brief Print addres of pointer to stdout
@@ -48,7 +48,7 @@ int	format_int(int size, size_t upper, size_t base);
 *
 * @return int >=0 | -1
 */
-int	format_ptr(void *ptr, size_t upper, size_t base);
+ssize_t	format_ptr(void *ptr, size_t upper, size_t base);
 
 /**
 * @brief A simple print function that takes arguments
@@ -58,7 +58,7 @@ int	format_ptr(void *ptr, size_t upper, size_t base);
 *
 * @return int >=0 | -1
 */
-int	ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
 
 /**
 * @brief Write ascii to stdout
@@ -67,7 +67,7 @@ int	ft_printf(const char *s, ...);
 *
 * @return int 1 | -1
 */
-int	write_ascii(int c);
+int		write_ascii(int c);
 
 /**
 * @brief Write a string to stdout
@@ -76,5 +76,5 @@ int	write_ascii(int c);
 *
 * @return int >=0 | -1
 */
-int	write_str(const char *s);
+int		write_str(const char *s);
 #endif

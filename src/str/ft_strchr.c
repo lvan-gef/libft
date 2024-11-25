@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 16:39:39 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 16:40:39 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:01:41 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	char	target;
 
 	index = 0;
-	target = c;
+	target = (char)c;
 	str = (char *)s;
 	if (target == '\0')
 		return (&str[ft_strlen(str)]);

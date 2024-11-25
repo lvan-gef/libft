@@ -6,16 +6,16 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 17:19:26 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 16:33:38 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:20:04 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-static int	get_len(int c)
+static size_t	get_len(int c)
 {
-	int	counter;
-	int	base;
+	size_t	counter;
+	int		base;
 
 	counter = 0;
 	base = 10;
@@ -36,13 +36,13 @@ static int	get_len(int c)
 
 char	*ft_itoa(int n)
 {
-	int		l;
+	size_t	len;
 	char	*str;
 
 	if (n == INT_MIN)
 		return (ft_strdup((char *)INT_MIN));
-	l = get_len(n);
-	str = ft_calloc(l + 1, sizeof(char));
+	len = get_len(n);
+	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	if (n == 0)
@@ -52,12 +52,12 @@ char	*ft_itoa(int n)
 		n *= -1;
 		str[0] = '-';
 	}
-	l--;
+	len--;
 	while (n != 0)
 	{
-		str[l] = (n % 10) + '0';
+		str[len] = (n % 10) + '0';
 		n = n / 10;
-		l--;
+		len--;
 	}
 	return (str);
 }

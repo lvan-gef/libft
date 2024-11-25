@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/12 17:42:54 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/06/08 19:22:39 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 22:17:35 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int	write_str(const char *s)
 
 int	write_ascii(int c)
 {
-	return (write(1, &c, 1));
+	return ((int)write(1, &c, 1));
 }

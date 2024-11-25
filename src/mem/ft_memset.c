@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 12:27:27 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/07/07 16:27:34 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/11/25 21:59:33 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *dest, int val, int len)
 	ptr = (unsigned char *)dest;
 	while (len--)
 	{
-		*ptr++ = val;
+		*ptr++ = (unsigned char)val;
 	}
 	return (dest);
 }
